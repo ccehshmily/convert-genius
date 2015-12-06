@@ -1,0 +1,8 @@
+#foreach($convertableType in $convertableTypes)
+<option value="$convertableType.value"
+  #if($textType && $textType==$convertableType.value)
+    selected
+  #end>
+  $convertableType.name
+</option>
+#end

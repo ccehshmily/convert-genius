@@ -5,9 +5,10 @@
 
   <div class="form-group">
     <select class="form-control" id="textType1" name="textType1">
-      #foreach($convertableType in $convertableTypes)
-        <option value="$convertableType.value">$convertableType.name</option>
+      #if($textType1)
+        #set($textType=$textType1)
       #end
+      #parse("templates/convertable_options.vtl")
     </select>
   </div>
 
@@ -22,9 +23,10 @@
 
   <div class="form-group">
     <select class="form-control" id="textType2" name="textType2">
-      #foreach($convertableType in $convertableTypes)
-        <option value="$convertableType.value">$convertableType.name</option>
+      #if($textType2)
+        #set($textType=$textType2)
       #end
+      #parse("templates/convertable_options.vtl")
     </select>
   </div>
 

@@ -1,8 +1,8 @@
 package common;
 
 public enum ConvertableType {
-  INTEGERS(1, "integer"),
-  HEX(2, "hex");
+  INTEGERS(1, "Integer"),
+  HEX(2, "Hex");
 
   private int mValue;
   private String mName;
