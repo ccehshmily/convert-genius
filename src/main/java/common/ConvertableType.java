@@ -17,7 +17,10 @@ public enum ConvertableType {
   // For example, for TYPE1(1, Name1, "") and TYPE2(2, Name2, ""), implement
   // Name1ToName2Converter in package converter.
   INTEGERS(1, "Integer", "Number: decimal integer"),
-  HEX(2, "Hex", "Number: hex integer");
+  HEX(2, "Hex", "Number: hex integer"),
+
+  //For Test
+  TEST(-1, "Test", "FORTEST");
 
   private int value;
   private String name;

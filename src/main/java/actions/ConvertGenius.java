@@ -19,6 +19,9 @@ public class ConvertGenius {
   private static final String RES_FILES = "/public";
 
   public static void main(String[] args) {
+    // Set up starting port
+    // port(9090);
+
     // Set up root directory for public resources (images, css)
     staticFileLocation(RES_FILES);
 
@@ -50,18 +53,20 @@ public class ConvertGenius {
           int textType1 = Integer.parseInt(request.queryParams("textType1"));
           int textType2 = Integer.parseInt(request.queryParams("textType2"));
           String direction = request.queryParams("direction");
-          ConverterHelper converterHelper = new ConverterHelper(
-              textInput1, textInput2, textType1, textType2, direction);
 
+          String newOutputString = "";
           // Catch convert exeptions, print stacktrace in server console.
           // TODO: After ajax is implemented, report the exceptions to frontend.
           try {
+            ConverterHelper converterHelper = new ConverterHelper(
+                textInput1, textInput2, textType1, textType2, direction);
             converterHelper.convert();
+            newOutputString = converterHelper.getOutputString();
           } catch (ConverterException e) {
-            System.out.println(e.getResponseValue());
+            System.out.println(e.getResponseCode());
             System.out.println(e.getExceptionMessage());
           } catch (Exception e) {
-            System.out.println("Non-Converter Exception caught:");
+            System.out.println("[Non-Converter Exception caught]");
             e.printStackTrace();
           }
 
@@ -75,10 +80,10 @@ public class ConvertGenius {
           model.put("convertableTypes", ConvertableType.values());
           switch (direction) {
             case "down":
-              model.put("textInputValue2", converterHelper.getOutputString());
+              model.put("textInputValue2", newOutputString);
               break;
             case "up":
-              model.put("textInputValue1", converterHelper.getOutputString());
+              model.put("textInputValue1", newOutputString);
               break;
           }
           return new ModelAndView(model, LAYOUT_TEMPLATE);
