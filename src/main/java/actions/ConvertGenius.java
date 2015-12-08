@@ -4,6 +4,7 @@ import static spark.Spark.*;
 
 import common.ConvertableType;
 import common.ConverterHelper;
+import exceptions.ConverterException;
 import spark.ModelAndView;
 import spark.template.velocity.VelocityTemplateEngine;
 
@@ -53,10 +54,14 @@ public class ConvertGenius {
               textInput1, textInput2, textType1, textType2, direction);
 
           // Catch convert exeptions, print stacktrace in server console.
-          // TODO: have more specific exceptions, report some to frontend.
+          // TODO: After ajax is implemented, report the exceptions to frontend.
           try {
             converterHelper.convert();
+          } catch (ConverterException e) {
+            System.out.println(e.getResponseValue());
+            System.out.println(e.getExceptionMessage());
           } catch (Exception e) {
+            System.out.println("Non-Converter Exception caught:");
             e.printStackTrace();
           }
 

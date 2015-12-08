@@ -1,6 +1,8 @@
 package common;
 
 import converter.Converter;
+import exceptions.ConverterNotFoundException;
+import exceptions.InvalidQueryParamsException;
 
 import java.util.HashMap;
 
@@ -39,6 +41,8 @@ public final class ConverterHelper {
         inputType = textType2;
         outputType = textType1;
         break;
+      default:
+        throw new InvalidQueryParamsException();
     }
   }
 
@@ -55,14 +59,13 @@ public final class ConverterHelper {
     return outputString;
   }
 
-  // Get the converter name based on the given types.
+  // Get the converter name based on the given types. Construct from the type names.
   @SuppressWarnings("unchecked")
-  private Converter getConverter(
-      int inputType, int outputType) throws Exception {
-    if (findConverter(inputType, outputType)) {
+  private Converter getConverter(int inputType, int outputType) {
+    if (hasConverter(inputType, outputType)) {
       return CONVERTER_MAP.get(inputType).get(outputType);
     }
-    String typeName1, typeName2;
+    String typeName1 = "", typeName2 = "";
     // TODO: this can be time consuming when the list becomes long,
     //   consider passing in the types based on the category (once we have that)
     for (ConvertableType type : ConvertableType.values()) {
@@ -73,13 +76,23 @@ public final class ConverterHelper {
         typeName2 = type.getName();
       }
     }
-    String converterName =
-        "converter." + typeName1 + "To" + typename2 + "Converter";
-    Converter converter = (Converter) Class.forName(converterName).newInstance();
+    if (typeName1.isEmpty() || typeName2.isEmpty()) {
+      throw new InvalidQueryParamsException();
+    }
+    String converterName = "converter." + typeName1 + "To" + typename2 + "Converter";
+    Converter converter;
+    // Catch ClassNotFoundException when certain conversions are not implemented, throw
+    // ConverterNotFoundException which can be handled later.
+    try {
+      converter = (Converter) Class.forName(converterName).newInstance();
+    } catch (ClassNotFoundException e) {
+      throw new ConverterNotFoundException(typeName1, typeName2);
+    }
     saveConverter(inputType, outputType, converter);
+    return converter;
   }
 
-  private boolean findConverter(int inputType, int outputType) {
+  private boolean hasConverter(int inputType, int outputType) {
     return CONVERTER_MAP.hasKey(inputType) && CONVERTER_MAP.get(inputType).hasKey(outputType);
   }
 
