@@ -1,0 +1,42 @@
+body {
+	background-image: url(../images/bg/bgnoise.png);
+	font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	+font-family: 'Microsoft YaHei', sans-serif;
+}
+
+#side {
+
+}
+
+#bo {
+}
+
+#maincon {
+	background: url(../images/bg/body.png) repeat-y;
+	padding-top: 60px;
+}
+
+#botcon {
+	background: url(../images/bg/botcon.png) no-repeat;
+}
+
+.form-horizontal .control-label {
+    width: 80px;
+}
+
+.form-horizontal .controls {
+    margin-left: 90px;
+}
+
+.form-horizontal .form-actions {
+    padding-left: 10px;
+		border-bottom: 1px solid #e5e5e5;
+}
+
+select {
+	width: 400px;
+}
+
+.page-header {
+  padding-left: 20px;
+}

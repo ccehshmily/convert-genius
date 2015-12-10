@@ -1,36 +1,48 @@
-<form action="/convert">
-  <div class="form-group">
-    <textarea class="form-control" id="textInput1" rows="5" name="textInput1">$textInputValue1</textarea>
+<form class="form-horizontal" action="/convert">
+  <div class="control-group">
+    <label class="control-label" for="textInput1"><strong>Input</strong></label>
+    <div class="controls">
+      <textarea class="input-xxlarge" id="textInput1" rows="5" name="textInput1">$textInputValue1</textarea>
+    </div>
   </div>
 
-  <div class="form-group">
-    <select class="form-control" id="textType1" name="textType1">
-      #if($textType1)
-        #set($textType=$textType1)
-      #end
-      #parse("templates/convertable_options.vtl")
-    </select>
+  <div class="control-group">
+    <label class="control-label" for="textType1"><strong>Input Type</strong></label>
+    <div class="controls">
+      <select id="textType1" name="textType1">
+        #if($textType1)
+          #set($textType=$textType1)
+        #end
+        #parse("templates/convertable_options.vtl")
+      </select>
+    </div>
   </div>
 
-  <div class="form-group" align="center">
-    <button type="submit" class="btn btn-primary btn-lg" name="direction" value="down">
+  <div class="form-actions" align="center">
+    <button type="submit" class="btn btn-primary" name="direction" value="down">
       <img src="/images/arrow_down.png" />Convert Down
     </button>
-    <button type="submit" class="btn btn-primary btn-lg" name="direction" value="up">
+    <button type="submit" class="btn btn-primary" name="direction" value="up">
       Convert Up<img src="/images/arrow_up.png" />
     </button>
   </div>
 
-  <div class="form-group">
-    <select class="form-control" id="textType2" name="textType2">
-      #if($textType2)
-        #set($textType=$textType2)
-      #end
-      #parse("templates/convertable_options.vtl")
-    </select>
+  <div class="control-group">
+    <label class="control-label" for="textType2"><strong>Output Type</strong></label>
+    <div class="controls">
+      <select id="textType2" name="textType2">
+        #if($textType2)
+          #set($textType=$textType2)
+        #end
+        #parse("templates/convertable_options.vtl")
+      </select>
+    </div>
   </div>
 
-  <div class="form-group">
-    <textarea class="form-control" id="textInput2" rows="5" name="textInput2">$textInputValue2</textarea>
+  <div class="control-group">
+    <label class="control-label" for="textInput2"><strong>Output</strong></label>
+    <div class="controls">
+      <textarea class="input-xxlarge" id="textInput2" rows="5" name="textInput2">$textInputValue2</textarea>
+    </div>
   </div>
 <form>

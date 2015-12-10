@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<title>后台管理</title>
+		<meta name="description" content="后台管理">
+		<meta name="author" content="">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="../../public/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="../../public/bootstrap/main.css" rel="stylesheet">
+		<!--[if IE 6]>
+			<link href="../../public/bootstrap/bootstrap_ie6/ie6.min.css" rel="stylesheet">
+		<![endif]-->
+		<script type="text/javascript" src="../../public/bootstrap/bootstrap_ie6/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="../../public/bootstrap/bootstrap_ie6/bootstrap.js"></script>
+
+	</head>
+
+	<body>
+		<div class="navbar navbar-fixed-top">
+		    <div class="navbar-inner">
+		      <div class="container">
+		        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+		          <span class="icon-bar"></span>
+		        </a>
+		        <a class="brand" href="#">后台 Admin</a>
+		        <div class="nav-collapse">
+		          <ul class="nav">
+		            <li class="active"><a href="#">首页</a></li>
+		            <li><a href="#">校区管理</a></li>
+		            <li><a href="#">绳命支持</a></li>
+		            <li><a href="#">社交网络</a></li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">分类管理 <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="#">分类列表</a></li>
+		                <li><a href="#">新增分类</a></li>
+		                <li><a href="#">删除分类</a></li>
+		                <li class="divider"></li>
+		                <li class="nav-header">Now used</li>
+		                <li><a href="#">一种方式</a></li>
+		                <li><a href="#">另一种方式</a></li>
+		              </ul>
+		            </li>
+		          </ul>
+		          <form class="navbar-search pull-left" action="">
+		            <input type="text" class="search-query span2" placeholder="全站搜索">
+		          </form>
+		          <ul class="nav pull-right">
+		            <li><a href="#">欢迎！管理员</a></li>
+		            <li class="divider-vertical"></li>
+		            <li class="dropdown">
+		              <a href="#" class="dropdown-toggle" data-toggle="dropdown">帐户 <b class="caret"></b></a>
+		              <ul class="dropdown-menu">
+		                <li><a href="#">查看帐户</a></li>
+		                <li><a href="#">编辑信息</a></li>
+		                <li><a href="#">操作说明</a></li>
+		                <li class="divider"></li>
+		                <li><a href="#">退出</a></li>
+		              </ul>
+		            </li>
+		          </ul>
+		        </div><!-- /.nav-collapse -->
+		      </div>
+		    </div><!-- /navbar-inner -->
+		  </div>
+		<div id="maincon" class="container">
+		  <div class="row">
+		    <div class="span3">
+				<div id="side">
+					<div class="" style="width: 205px; padding: 0; margin-left:13px;">
+					        <ul class="nav nav-list">
+					          <li class="nav-header">功能分类</li>
+					          <li class="active"><a href="#"><i class="icon-white icon-home"></i> 首页</a></li>
+					          <li><a href="#"><i class="icon-book"></i> 资源库</a></li>
+					          <li><a href="#"><i class="icon-pencil"></i> 应用程序</a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li><a href="#"><i class="icon-user"></i> 个人信息<span class="badge badge-warning">4</span></a></li>
+					          <li><a href="#"><i class="icon-cog"></i> 设置</a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li class=""><a href="#"><i class="icon-home"></i> 电子邮箱注册用户</a></li>
+					          <li><a href="#"><i class="icon-book"></i> 新浪微博和腾讯微博设置</a></li>
+					          <li><a href="#"><i class="icon-pencil"></i> 应用程序<span class="badge badge-success">2</span></a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li><a href="#"><i class="icon-user"></i> 个人信息</a></li>
+					          <li><a href="#"><i class="icon-cog"></i> 设置<span class="badge badge-important">6</span></a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li class=""><a href="#"><i class="icon-home"></i> 首页</a></li>
+					          <li><a href="#"><i class="icon-book"></i> 资源库</a></li>
+					          <li><a href="#"><i class="icon-pencil"></i> 新浪微博和腾讯微博设置</a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li><a href="#"><i class="icon-user"></i> 个人信息</a></li>
+					          <li><a href="#"><i class="icon-cog"></i> 设置</a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li class=""><a href="#"><i class="icon-home"></i> 首页</a></li>
+					          <li><a href="#"><i class="icon-book"></i> 新浪微博和腾讯微博设置</a></li>
+					          <li><a href="#"><i class="icon-pencil"></i> 应用程序</a></li>
+					          <li class="divider"></li>
+					          <li class="nav-header">功能分类</li>
+					          <li><a href="#"><i class="icon-user"></i> dd 命令详解</a></li>
+					          <li><a href="#"><i class="icon-cog"></i> 设置</a></li>
+					          <li class="divider"></li>
+					          <li><a href="#"><i class="icon-flag"></i> 帮助</a></li>
+					        </ul>
+					      </div>
+				</div>
+		    </div>
+		    <div class="span9">
+				<div id="bo">
+					<ul class="breadcrumb">
+					  <li>
+					    <a href="#">首页</a> <span class="divider">/</span>
+					  </li>
+					  <li>
+					    <a href="#">管理介面</a> <span class="divider">/</span>
+					  </li>
+					  <li>
+					    <a href="#">网络管理</a> <span class="divider">/</span>
+					  </li>
+					  <li class="active">高级设置</li>
+					</ul>
+					<div class="page-header">
+				        <h1>Advanced Settings <small>这里可以进行高级设置</small></h1>
+				    </div>
+				    <div class="alert">
+				      <button class="close" data-dismiss="alert">×</button>
+				      <strong>提示：</strong> 你还没有设置电子邮箱地址，请进行设置
+				    </div>
+				    <div class="alert alert-error">
+				      <button class="close" data-dismiss="alert">×</button>
+				      <strong>错误：</strong> 你提交了非法信息，操作失败！
+				    </div>
+				    <div class="alert alert-success">
+				      <button class="close" data-dismiss="alert">×</button>
+				      <strong>成功：</strong> 操作成功，数据已经保存
+				    </div>
+				    <div class="alert alert-info">
+				      <button class="close" data-dismiss="alert">×</button>
+				      <strong>信息：</strong> 你可以为本网站设计一个标识。
+				    </div>
+				    <div class="well">
+				      有些功能作为术语，可以被单独标出，比如点击<code>开始</code>菜单。
+				    </div>
+					<form class="form-horizontal">
+					        <fieldset>
+					          <div class="control-group">
+					            <label class="control-label" for="input01">Text input</label>
+					            <div class="controls">
+					              <input type="text" class="input-xlarge" id="input01">
+					              <p class="help-block">In addition to freeform text...</p>
+					            </div>
+					          </div>
+					          <div class="control-group">
+					            <label class="control-label" for="optionsCheckbox">Checkbox</label>
+					            <div class="controls">
+					              <label class="checkbox">
+					                <input type="checkbox" id="optionsCheckbox" value="option1">
+					                Option one is this and that—be sure to include why it's great
+					              </label>
+					            </div>
+					          </div>
+					          <div class="control-group">
+					            <label class="control-label" for="select01">Select list</label>
+					            <div class="controls">
+					              <select id="select01">
+					                <option>something</option>
+					                <option>2</option>
+					                <option>3</option>
+					                <option>4</option>
+					                <option>5</option>
+					              </select>
+					            </div>
+					          </div>
+					          <div class="control-group">
+					            <label class="control-label" for="multiSelect">Multicon-select</label>
+					            <div class="controls">
+					              <select multiple="multiple" id="multiSelect">
+					                <option>1</option>
+					                <option>2</option>
+					                <option>3</option>
+					                <option>4</option>
+					                <option>5</option>
+					              </select>
+					            </div>
+					          </div>
+					          <div class="control-group">
+					            <label class="control-label" for="fileInput">File input</label>
+					            <div class="controls">
+					              <input class="input-file" id="fileInput" type="file">
+					            </div>
+					          </div>
+					          <div class="control-group">
+					            <label class="control-label" for="textarea">Textarea</label>
+					            <div class="controls">
+					              <textarea class="input-xlarge" id="textarea" rows="3"></textarea>
+					            </div>
+					          </div>
+					          <div class="form-actions">
+					            <button type="submit" class="btn btn-primary">Save changes</button>
+					            <button class="btn">Cancel</button>
+					          </div>
+					        </fieldset>
+					 </form>
+					 <form class="form-horizontal">
+					         <fieldset>
+					           <div class="control-group">
+					             <label class="control-label" for="focusedInput">Focused input</label>
+					             <div class="controls">
+					               <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
+					             </div>
+					           </div>
+					           <div class="control-group">
+					             <label class="control-label">Uneditable input</label>
+					             <div class="controls">
+					               <span class="input-xlarge uneditable-input">Some value here</span>
+					             </div>
+					           </div>
+					           <div class="control-group">
+					             <label class="control-label" for="disabledInput">Disabled input</label>
+					             <div class="controls">
+					               <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
+					             </div>
+					           </div>
+					           <div class="control-group">
+					             <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
+					             <div class="controls">
+					               <label class="checkbox">
+					                 <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
+					                 This is a disabled checkbox
+					               </label>
+					             </div>
+					           </div>
+					           <div class="control-group warning">
+					             <label class="control-label" for="inputWarning">Input with warning</label>
+					             <div class="controls">
+					               <input type="text" id="inputWarning">
+					               <span class="help-inline">Something may have gone wrong</span>
+					             </div>
+					           </div>
+					           <div class="control-group error">
+					             <label class="control-label" for="inputError">Input with error</label>
+					             <div class="controls">
+					               <input type="text" id="inputError">
+					               <span class="help-inline">Please correct the error</span>
+					             </div>
+					           </div>
+					           <div class="control-group success">
+					             <label class="control-label" for="inputSuccess">Input with success</label>
+					             <div class="controls">
+					               <input type="text" id="inputSuccess">
+					               <span class="help-inline">Woohoo!</span>
+					             </div>
+					           </div>
+					           <div class="control-group success">
+					             <label class="control-label" for="selectError">Select with success</label>
+					             <div class="controls">
+					               <select id="selectError">
+					                 <option>1</option>
+					                 <option>2</option>
+					                 <option>3</option>
+					                 <option>4</option>
+					                 <option>5</option>
+					               </select>
+					               <span class="help-inline">Woohoo!</span>
+					             </div>
+					           </div>
+					           <div class="form-actions">
+					             <button type="submit" class="btn btn-primary">Save changes</button>
+					             <button class="btn">Cancel</button>
+					           </div>
+					         </fieldset>
+					       </form>
+					<table class="table table-bordered table-striped">
+					    <thead>
+					      <tr>
+					        <th>Button</th>
+					        <th>class=""</th>
+					        <th>Description</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					      <tr>
+					        <td><button class="btn" href="#">Default</button></td>
+					        <td><code>btn</code></td>
+					        <td>Standard gray button with gradient</td>
+					      </tr>
+					      <tr>
+					        <td><button class="btn btn-primary" href="#">Primary</button></td>
+					        <td><code>btn btn-primary</code></td>
+					        <td>Provides extra visual weight and identifies the primary action in a set of buttons</td>
+					      </tr>
+					      <tr>
+					        <td><button class="btn btn-info" href="#">Info</button></td>
+					        <td><code>btn btn-info</code></td>
+					        <td>Used as an alternative to the default styles</td>
+					      </tr>
+					      <tr>
+					        <td><button class="btn btn-success" href="#">Success</button></td>
+					        <td><code>btn btn-success</code></td>
+					        <td>Indicates a successful or positive action</td>
+					      </tr>
+					      <tr>
+					        <td><button class="btn btn-warning" href="#">Warning</button></td>
+					        <td><code>btn btn-warning</code></td>
+					        <td>Indicates caution should be taken with this action</td>
+					      </tr>
+					      <tr>
+					        <td><button class="btn btn-danger" href="#">Danger</button></td>
+					        <td><code>btn btn-danger</code></td>
+					        <td>Indicates a dangerous or potentially negative action</td>
+					      </tr>
+					      <tr>
+					        <td><button class="btn btn-inverse" href="#">Inverse</button></td>
+					        <td><code>btn btn-inverse</code></td>
+					        <td>Alternate dark gray button, not tied to a semantic action or use</td>
+					      </tr>
+					    </tbody>
+					  </table>
+			        <h3>Multiple sizes</h3>
+			        <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for two additional sizes.</p>
+			        <p>
+			          <button class="btn btn-large btn-primary">Primary action</button>
+			          <button class="btn btn-large">Action</button>
+			        </p>
+			        <p>
+			          <button class="btn btn-small btn-primary">Primary action</button>
+			          <button class="btn btn-small">Action</button>
+			        </p>
+			        <p>
+			          <button class="btn btn-mini btn-primary">Primary action</button>
+			          <button class="btn btn-mini">Action</button>
+			        </p>
+			        <br>
+			        <h3>Disabled state</h3>
+			        <p>For disabled buttons, add the <code>.disabled</code> class to links and the <code>disabled</code> attribute for <code>&lt;button&gt;</code> elements.</p>
+			        <p>
+			          <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+			          <a href="#" class="btn btn-large disabled">Link</a>
+			        </p>
+			        <p style="margin-bottom: 18px;">
+			          <button class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+			          <button class="btn btn-large" disabled="">Button</button>
+			        </p>
+			        <p>
+			          <span class="label label-info">Heads up!</span>
+			          We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required.
+			        </p>
+				    <div class="btn-toolbar" style="margin-top: 18px;">
+				            <div class="btn-group">
+				              <button class="btn">Action</button>
+				              <button class="btn dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				              <ul class="dropdown-menu">
+				                <li><a href="#">Action</a></li>
+				                <li><a href="#">Another action</a></li>
+				                <li><a href="#">Something else here</a></li>
+				                <li class="divider"></li>
+				                <li><a href="#">Separated link</a></li>
+				              </ul>
+				            </div><!-- /btn-group -->
+				            <div class="btn-group">
+				              <button class="btn btn-primary">Action</button>
+				              <button class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				              <ul class="dropdown-menu">
+				                <li><a href="#">Action</a></li>
+				                <li><a href="#">Another action</a></li>
+				                <li><a href="#">Something else here</a></li>
+				                <li class="divider"></li>
+				                <li><a href="#">Separated link</a></li>
+				              </ul>
+				            </div><!-- /btn-group -->
+				            <div class="btn-group">
+				              <button class="btn btn-danger">Danger</button>
+				              <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				              <ul class="dropdown-menu">
+				                <li><a href="#">Action</a></li>
+				                <li><a href="#">Another action</a></li>
+				                <li><a href="#">Something else here</a></li>
+				                <li class="divider"></li>
+				                <li><a href="#">Separated link</a></li>
+				              </ul>
+				            </div><!-- /btn-group -->
+				      </div>
+				      <div class="btn-toolbar">
+				              <div class="btn-group">
+				                <button class="btn btn-warning">Warning</button>
+				                <button class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				                <ul class="dropdown-menu">
+				                  <li><a href="#">Action</a></li>
+				                  <li><a href="#">Another action</a></li>
+				                  <li><a href="#">Something else here</a></li>
+				                  <li class="divider"></li>
+				                  <li><a href="#">Separated link</a></li>
+				                </ul>
+				              </div><!-- /btn-group -->
+				              <div class="btn-group">
+				                <button class="btn btn-success">Success</button>
+				                <button class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				                <ul class="dropdown-menu">
+				                  <li><a href="#">Action</a></li>
+				                  <li><a href="#">Another action</a></li>
+				                  <li><a href="#">Something else here</a></li>
+				                  <li class="divider"></li>
+				                  <li><a href="#">Separated link</a></li>
+				                </ul>
+				              </div><!-- /btn-group -->
+				              <div class="btn-group">
+				                <button class="btn btn-info">Info</button>
+				                <button class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				                <ul class="dropdown-menu">
+				                  <li><a href="#">Action</a></li>
+				                  <li><a href="#">Another action</a></li>
+				                  <li><a href="#">Something else here</a></li>
+				                  <li class="divider"></li>
+				                  <li><a href="#">Separated link</a></li>
+				                </ul>
+				              </div><!-- /btn-group -->
+				      </div>
+				      <div class="btn-toolbar">
+				              <div class="btn-group">
+				                <button class="btn btn-inverse">Inverse</button>
+				                <button class="btn btn-inverse dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+				                <ul class="dropdown-menu">
+				                  <li><a href="#">Action</a></li>
+				                  <li><a href="#">Another action</a></li>
+				                  <li><a href="#">Something else here</a></li>
+				                  <li class="divider"></li>
+				                  <li><a href="#">Separated link</a></li>
+				                </ul>
+				              </div><!-- /btn-group -->
+				      </div>
+				</div>
+		    </div>
+		  </div>
+		</div>
+		<div id="botcon" class="container">
+			<div class="row">
+				<div class="span12">
+					<br />
+					<hr />
+					<div style="text-align: center;">后台管理 最后更新：2012-08 京ICP备XX号</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+</html>
