@@ -1,0 +1,21 @@
+body {
+	background-image: url(../images/bg/bgnoise.png);
+	font-family: 'Helvetica Neue', Arial, 'Liberation Sans', FreeSans, 'Hiragino Sans GB', 'Microsoft YaHei', sans-serif;
+	+font-family: 'Microsoft YaHei', sans-serif;
+}
+
+#side {	
+	
+}
+
+#bo {
+}
+
+#maincon {
+	background: url(../images/bg/body.png) repeat-y;
+	padding-top: 60px;
+}
+
+#botcon {
+	background: url(../images/bg/botcon.png) no-repeat;
+}

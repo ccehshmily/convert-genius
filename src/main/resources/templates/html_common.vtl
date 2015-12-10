@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Convert Genius - convert anything freely</title>
-    <link rel='stylesheet' href='/css/bootstrap.min.css'>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<title>One Converter - Best Conversion Tool EVER!/title>
+		<meta name="description" content="One Converter">
+		<meta name="author" content="">
+		<!--[if lt IE 9]>
+			<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link href="/bootstrap/bootstrap/css/bootstrap.css" rel="stylesheet">
+		<link href="/bootstrap/main.css" rel="stylesheet">
+		<!--[if IE 6]>
+			<link href="/bootstrap/bootstrap_ie6/ie6.min.css" rel="stylesheet">
+		<![endif]-->
+		<script type="text/javascript" src="/bootstrap/bootstrap_ie6/jquery-1.7.1.min.js"></script>
+		<script type="text/javascript" src="/bootstrap/bootstrap_ie6/bootstrap.js"></script>
+	</head>
   <body>
-    <div class="container">
-      #parse($template)
+    <div class="navbar navbar-fixed-top">
+	    <div class="navbar-inner">
+	      <div class="container">
+	        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	        </a>
+	        <a class="brand" href="#">One Converter</a>
+	      </div>
+	    </div><!-- /navbar-inner -->
+	  </div>
+    <div id="maincon" class="container">
+		  <div class="row">
+		    <div class="span3">
+  				<div id="side">
+  					<div class="" style="width: 205px; padding: 0; margin-left:13px;">
+			        <ul class="nav nav-list">
+			          <li class="nav-header">Converter Category</li>
+			          <li class="active"><a href="#"><i class="icon-white icon-home"></i> All</a></li>
+			          <li class="divider"></li>
+			          <li><a href="#"><i class="icon-user"></i> Numbers</a></li>
+			        </ul>
+			      </div>
+				  </div>
+		    </div>
+        <div class="span9">
+  				<div id="bo">
+            <div class="page-header">
+  		        <h1>Convert from Decimal to Hex</h1>
+  			    </div>
+            #parse($template)
+          </div>
+        </div>
+      </div>
     </div>
-  </body>
+    <div id="botcon" class="container">
+			<div class="row">
+				<div class="span12">
+					<br />
+					<hr />
+					<div style="text-align: center;">One Converter</div>
+				</div>
+			</div>
+		</div>
+	</body>
 </html>
