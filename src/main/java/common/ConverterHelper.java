@@ -26,7 +26,7 @@ public final class ConverterHelper {
       new HashMap<Integer, HashMap<Integer, Converter>>();
 
   public ConverterHelper(String textInput1, String textInput2,
-      int textType1, int textType2, String direction) {
+      int textType1, int textType2, String direction) throws Exception {
     // Determine the convert direction and set proper input and output
     switch (direction) {
       case "down":
@@ -61,7 +61,7 @@ public final class ConverterHelper {
 
   // Get the converter name based on the given types. Construct from the type names.
   @SuppressWarnings("unchecked")
-  private Converter getConverter(int inputType, int outputType) {
+  private Converter getConverter(int inputType, int outputType) throws Exception {
     if (hasConverter(inputType, outputType)) {
       return CONVERTER_MAP.get(inputType).get(outputType);
     }
@@ -79,7 +79,7 @@ public final class ConverterHelper {
     if (typeName1.isEmpty() || typeName2.isEmpty()) {
       throw new InvalidQueryParamsException();
     }
-    String converterName = "converter." + typeName1 + "To" + typename2 + "Converter";
+    String converterName = "converter." + typeName1 + "To" + typeName2 + "Converter";
     Converter converter;
     // Catch ClassNotFoundException when certain conversions are not implemented, throw
     // ConverterNotFoundException which can be handled later.
@@ -93,12 +93,12 @@ public final class ConverterHelper {
   }
 
   private boolean hasConverter(int inputType, int outputType) {
-    return CONVERTER_MAP.hasKey(inputType) && CONVERTER_MAP.get(inputType).hasKey(outputType);
+    return CONVERTER_MAP.containsKey(inputType) && CONVERTER_MAP.get(inputType).containsKey(outputType);
   }
 
   private void saveConverter(int inputType, int outputType, Converter converter) {
     HashMap<Integer, Converter> innerMap;
-    if (CONVERTER_MAP.hasKey(inputType)) {
+    if (CONVERTER_MAP.containsKey(inputType)) {
       innerMap = CONVERTER_MAP.get(inputType);
     } else {
       innerMap = new HashMap<Integer, Converter>();

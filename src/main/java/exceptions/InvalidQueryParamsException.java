@@ -8,12 +8,12 @@ public final class InvalidQueryParamsException extends ConverterException {
   private static String exception_message = "The query params for conversion are not correct.";
 
   @Override
-  protected int getResponseCode() {
+  public int getResponseCode() {
     return response_code;
   }
 
   @Override
-  protected String getExceptionMessage() {
+  public String getExceptionMessage() {
     return exception_message;
   }
 }
