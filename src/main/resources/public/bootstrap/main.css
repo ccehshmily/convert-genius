@@ -4,8 +4,8 @@ body {
 	+font-family: 'Microsoft YaHei', sans-serif;
 }
 
-#side {	
-	
+#side {
+
 }
 
 #bo {
@@ -18,4 +18,25 @@ body {
 
 #botcon {
 	background: url(../images/bg/botcon.png) no-repeat;
+}
+
+.form-horizontal .control-label {
+    width: 80px;
+}
+
+.form-horizontal .controls {
+    margin-left: 90px;
+}
+
+.form-horizontal .form-actions {
+    padding-left: 10px;
+		border-bottom: 1px solid #e5e5e5;
+}
+
+select {
+	width: 400px;
+}
+
+.page-header {
+  padding-left: 20px;
 }
